@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Hussein-deployment
+  name: nginx-deployment
   namespace: my-namespace
 spec:
   replicas: 3
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: devops2022.azurecr.io/nginx:Hussein2
         ports:
         - containerPort: 80
